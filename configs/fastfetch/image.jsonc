@@ -1,0 +1,115 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "source": "LOGO_PATH",
+    "width": 24,
+    "height": 12,
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 3
+    }
+  },
+  "display": {
+    "separator": " 󰑃 ",
+    "color": {
+      "keys": "38;2;38;166;154",
+      "title": "38;2;128;222;234",
+      "separator": "38;2;84;110;122"
+    },
+    "key": {
+      "type": "icon",
+      "width": 3
+    },
+    "percent": {
+      "type": ["num", "num-color"],
+      "color": {
+        "green": "38;2;38;166;154",
+        "yellow": "38;2;255;213;79",
+        "red": "38;2;239;83;80"
+      }
+    }
+  },
+  "modules": [
+    "title",
+    {
+      "type": "separator",
+      "string": "─"
+    },
+    {
+      "type": "os",
+      "keyIcon": "󰣇",
+      "format": "{2} {8}"
+    },
+    {
+      "type": "host",
+      "keyIcon": "󰌢",
+      "format": "{name} {version}"
+    },
+    {
+      "type": "kernel",
+      "keyIcon": "",
+      "format": "{sysname} {release}"
+    },
+    {
+      "type": "uptime",
+      "keyIcon": ""
+    },
+    {
+      "type": "packages",
+      "keyIcon": "󰏖"
+    },
+    {
+      "type": "shell",
+      "keyIcon": ""
+    },
+    {
+      "type": "display",
+      "keyIcon": "󰍹",
+      "format": "{width}x{height} @ {refresh-rate}Hz"
+    },
+    {
+      "type": "de",
+      "keyIcon": ""
+    },
+    {
+      "type": "wm",
+      "keyIcon": ""
+    },
+    {
+      "type": "theme",
+      "keyIcon": "󰉼",
+      "format": "{1}"
+    },
+    {
+      "type": "icons",
+      "keyIcon": "󰀻",
+      "format": "{1}"
+    },
+    {
+      "type": "cpu",
+      "keyIcon": "",
+      "format": "{name}"
+    },
+    {
+      "type": "gpu",
+      "keyIcon": "󰾲",
+      "format": "{name:18} [{type}]"
+    },
+    {
+      "type": "memory",
+      "keyIcon": ""
+    },
+    {
+      "type": "disk",
+      "keyIcon": "󰋊",
+      "folders": "/"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}

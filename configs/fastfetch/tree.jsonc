@@ -1,0 +1,127 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+    "separator": " 󰑃 ",
+    "color": {
+      "keys": "38;2;38;166;154",
+      "title": "38;2;128;222;234",
+      "separator": "38;2;84;110;122"
+    }
+  },
+  "logo": {
+    "type": "auto",
+    "source": "arch3",
+    "color": {
+      "1": "38;2;38;166;154",
+      "2": "38;2;128;222;234"
+    },
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 3
+    }
+  },
+  "modules": [
+    "title",
+    {
+      "type": "separator",
+      "string": "─"
+    },
+    {
+      "key": "󰣇 SYSTEM",
+      "keyColor": "38;2;38;166;154",
+      "type": "os",
+      "format": "{2} {8}"
+    },
+    {
+      "key": "├ Kernel",
+      "keyColor": "38;2;128;203;196",
+      "type": "kernel",
+      "format": "{sysname} {release}"
+    },
+    {
+      "key": "├ Uptime",
+      "keyColor": "38;2;128;203;196",
+      "type": "uptime"
+    },
+    {
+      "key": "├󰏖 Packages",
+      "keyColor": "38;2;128;203;196",
+      "type": "packages"
+    },
+    {
+      "key": "└ Shell",
+      "keyColor": "38;2;128;203;196",
+      "type": "shell"
+    },
+    "break",
+    {
+      "key": " DESKTOP",
+      "keyColor": "38;2;128;222;234",
+      "type": "de"
+    },
+    {
+      "key": "├ WM",
+      "keyColor": "38;2;128;203;196",
+      "type": "wm"
+    },
+    {
+      "key": "├󰉼 Theme",
+      "keyColor": "38;2;128;203;196",
+      "type": "theme",
+      "format": "{1}"
+    },
+    {
+      "key": "├󰀻 Icons",
+      "keyColor": "38;2;128;203;196",
+      "type": "icons",
+      "format": "{1}"
+    },
+    {
+      "key": "├󰍹 Display",
+      "keyColor": "38;2;128;203;196",
+      "type": "display",
+      "format": "{width}x{height} @ {refresh-rate}Hz"
+    },
+    {
+      "key": "└ Terminal",
+      "keyColor": "38;2;128;203;196",
+      "type": "terminal"
+    },
+    "break",
+    {
+      "key": "󰌢 HARDWARE",
+      "keyColor": "38;2;255;213;79",
+      "type": "host",
+      "format": "{name}"
+    },
+    {
+      "key": "├ CPU",
+      "keyColor": "38;2;128;203;196",
+      "type": "cpu",
+      "format": "{name}"
+    },
+    {
+      "key": "├󰾲 GPU",
+      "keyColor": "38;2;128;203;196",
+      "type": "gpu",
+      "format": "{name:18} [{type}]"
+    },
+    {
+      "key": "├ Memory",
+      "keyColor": "38;2;128;203;196",
+      "type": "memory"
+    },
+    {
+      "key": "└󰋊 Disk (/)",
+      "keyColor": "38;2;128;203;196",
+      "type": "disk",
+      "folders": "/"
+    },
+    "break",
+    {
+      "type": "colors",
+      "symbol": "circle"
+    }
+  ]
+}
