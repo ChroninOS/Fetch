@@ -4,11 +4,12 @@
     "type": "auto",
     "source": "arch3",
     "color": {
-      "1": "38;2;38;166;154",
-      "2": "38;2;128;222;234"
+      "1": "38;2;26;188;156",
+      "2": "38;2;128;222;234",
+      "3": "38;2;38;166;154"
     },
     "padding": {
-      "top": 1,
+      "top": 0,
       "left": 1,
       "right": 3
     }
@@ -16,9 +17,10 @@
   "display": {
     "separator": " 󰑃 ",
     "color": {
-      "keys": "38;2;38;166;154",
-      "title": "38;2;128;222;234",
-      "separator": "38;2;84;110;122"
+      "keys": "cyan",
+      "title": "cyan",
+      "output": "",
+      "separator": "cyan"
     },
     "key": {
       "type": "icon",
@@ -27,33 +29,13 @@
     "percent": {
       "type": ["num", "num-color"],
       "color": {
-        "green": "38;2;38;166;154",
-        "yellow": "38;2;255;213;79",
-        "red": "38;2;239;83;80"
+        "green": "32",
+        "yellow": "93",
+        "red": "91"
       }
-    },
-    "bar": {
-      "char": {
-        "elapsed": "━",
-        "total": "─"
-      },
-      "border": {
-        "left": " ",
-        "right": " "
-      },
-      "color": {
-        "elapsed": "38;2;38;166;154",
-        "total": "38;2;84;110;122"
-      },
-      "width": 10
     }
   },
   "modules": [
-    "title",
-    {
-      "type": "separator",
-      "string": "─"
-    },
     {
       "type": "os",
       "keyIcon": "󰣇",
@@ -107,7 +89,7 @@
     {
       "type": "cursor",
       "keyIcon": "󰆿",
-      "format": "{1} ({2})"
+      "format": "{1} ({2}px)"
     },
     {
       "type": "terminal",
@@ -139,6 +121,7 @@
     "break",
     {
       "type": "colors",
+      "keyIcon": "",
       "symbol": "circle"
     }
   ]

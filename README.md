@@ -1,103 +1,84 @@
-# 🐬 Dolphin Teal Fastfetch Configurations
+# 🐬 Dolphin Teal Terminal & Fastfetch Suite
 
 [![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?logo=arch-linux&logoColor=fff&style=flat-square)](https://archlinux.org)
 [![Fastfetch](https://img.shields.io/badge/Fastfetch-2.x-brightgreen?style=flat-square)](https://github.com/fastfetch-cli/fastfetch)
-[![KDE Plasma](https://img.shields.io/badge/KDE_Plasma-Dolphin_Teal-1D99F3?logo=kde&logoColor=fff&style=flat-square)](https://kde.org)
+[![KDE Konsole](https://img.shields.io/badge/KDE_Konsole-VerdArch-1D99F3?logo=kde&logoColor=fff&style=flat-square)](https://konsole.kde.org)
+[![Alacritty](https://img.shields.io/badge/Alacritty-VerdArch-orange?logo=alacritty&logoColor=fff&style=flat-square)](https://alacritty.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-teal.svg?style=flat-square)](LICENSE)
 
-A curated collection of modern, aesthetically pleasing **Fastfetch** configurations styled in harmonious **Dolphin Teal** (`#26a69a`, `#80deea`, `#80cbc4`) and **Adwaita Dark** hues.
-
-Designed specifically to complement our [Dolphin Teal Powerline Bash Prompt](https://github.com/ChroninOS/Prompt) for **Arch Linux + KDE Plasma**.
+A unified aesthetic configuration suite for **Arch Linux + KDE Plasma**, featuring harmonized setups for **Fastfetch**, **KDE Konsole**, and **Alacritty** styled in the **Dolphin Teal / VerdArch** color palette.
 
 ---
 
-## ✨ Features
+## 🎨 Design Philosophy & Color Palette
 
-- 🎨 **Dolphin Teal Color Palette**: 24-bit TrueColor accents and gradients matching KDE Dolphin and dark desktop aesthetics.
-- 🔠 **Nerd Font Integration**: Carefully curated icons for OS, Kernel, Uptime, DE/WM, CPU, GPU, Memory, Swap, and Disks.
-- 📊 **Dynamic Percentages & Status Bars**: Color-coded usage meters with smooth UTF-8 progress indicators.
-- 🧩 **Multiple Preset Layouts**:
-  - **`config.jsonc` (Default)**: Modern cards with clean Arch ASCII art.
-  - **`tree.jsonc`**: Grouped categories (*SYSTEM*, *DESKTOP*, *HARDWARE*) with tree branches (`├`, `└`).
-  - **`compact.jsonc`**: Minimalist small ASCII view with core hardware and desktop stats.
-  - **`image.jsonc`**: High-resolution PNG logo rendering via Chafa / Kitty graphics protocol.
-- 🛡️ **Safe Installer**: Automatically creates timestamped backups of existing `~/.config/fastfetch` configurations.
+All configurations across Fastfetch, Konsole, and Alacritty share the exact same 24-bit TrueColor palette:
+
+| Element / Color | Hex Code | RGB | Role |
+| :--- | :--- | :--- | :--- |
+| **Background** | `#30313a` | `48, 49, 58` | Deep slate-dark background (with 85% opacity / blur) |
+| **Foreground** | `#fcfcfc` | `252, 252, 252` | Crisp high-contrast text |
+| **Cyan / Teal**| `#1abc9c` | `26, 188, 156` | Primary accents, cursor, selection, and icons |
+| **Light Cyan** | `#80deea` | `128, 222, 234` | Secondary gradient & ASCII logo highlights |
+| **Light Mint** | `#80cbc4` | `128, 203, 196` | Subdued highlights & badges |
+| **Green**      | `#11d116` | `17, 209, 22` | Positive status indicators |
+| **Red**        | `#ed1515` | `237, 21, 21` | Alerts and errors |
+| **Yellow**     | `#f67400` | `246, 116, 0` | Warnings |
 
 ---
 
-## 📸 Presets Overview
+## 📦 What's Included
 
-### 1. Default (Dolphin Teal Card)
 ```text
-                   .                     chronin@Arch
-                  / \                    ────────────
-                 /   \                   󰣇 󰑃 Arch Linux 
-                /     \                  󰌢 󰑃 MS-7C96 1.0
-               /       \                  󰑃 Linux 7.2.0-1-cachyos
-              />,       \                 󰑃 15 mins
-             /  `*.      \               󰏖 󰑃 1088 (pacman)
-            /      `      \               󰑃 bash 5.3.15
-           /               \             󰍹 󰑃 1920x1080 @ 75Hz
-          /                 \             󰑃 KDE Plasma 6.7.4
-         /      ,.-+-..      \            󰑃 KWin (Wayland)
-        /      ,/'   `\.      \          󰉼 󰑃 Breeze (ArcDark) [Qt]
-       /      .|'     `|.   _  \         󰀻 󰑃 Tela-manjaro [Qt]
-      /       :|.     ,|;    `+.\        󰆿 󰑃 Breeze_Light (24px)
-     /        .\:     ;/,      "<\        󰑃 konsole 26.8.0
-    /     __,--+"     "+--.__     \       󰑃 AMD Ryzen 5 5600G
-   /  _,+'"                 "'+._  \     󰾲 󰑃 Radeon Vega Series [Integrated]
-  /,-'                           `-.\     󰑃 2.20 GiB / 7.15 GiB (31%)
- '                                   '   󰓡 󰑃 0 B / 4.00 GiB (0%)
-                                         󰋊 󰑃 29.97 GiB / 97.87 GiB (31%)
-                                         
-                                         ● ● ● ● ● ● ● ●
+/media/Data/Forge/Fetch/
+├── README.md                  # Comprehensive guide & preview
+├── install.sh                 # Multi-component setup installer
+├── LICENSE                    # MIT License
+├── .gitignore
+├── configs/
+│   ├── fastfetch/             # Fastfetch configs (Default, Tree, Compact, Image)
+│   │   ├── config.jsonc
+│   │   ├── tree.jsonc
+│   │   ├── compact.jsonc
+│   │   └── image.jsonc
+│   ├── konsole/               # KDE Konsole Profile & Colorscheme
+│   │   ├── Chronin.profile
+│   │   └── VerdArch.colorscheme
+│   └── alacritty/             # Alacritty configuration
+│       └── alacritty.toml
+└── assets/
+    └── logos/                 # Distro logos for image-based fastfetch
 ```
-
-### 2. Tree-Structured Preset (`tree.jsonc`)
-Categorized view with branch connectors separating System, Desktop, and Hardware.
-
-### 3. Compact Minimal (`compact.jsonc`)
-Compact single-column view using `arch_small` ASCII art for small terminal windows.
 
 ---
 
 ## 🚀 Installation
 
-### Automated Setup
-
-1. Clone or navigate to the repository:
-   ```bash
-   cd /media/Data/Forge/Fetch
-   ```
-2. Make the installer executable and run it:
-   ```bash
-   chmod +x install.sh
-   ./install.sh
-   ```
-3. Select your preferred layout from the interactive menu.
-
----
-
-## ⚙️ Manual Preset Switching
-
-All preset configurations are stored in `~/.config/fastfetch/presets/`. You can test or switch to any preset at any time:
+Run the unified installer to deploy components:
 
 ```bash
-# Test a preset without overwriting your default:
-fastfetch -c ~/.config/fastfetch/presets/tree.jsonc
-fastfetch -c ~/.config/fastfetch/presets/compact.jsonc
-
-# Apply a preset as your primary config:
-cp ~/.config/fastfetch/presets/tree.jsonc ~/.config/fastfetch/config.jsonc
+cd /media/Data/Forge/Fetch
+chmod +x install.sh
+./install.sh
 ```
+
+Choose from the interactive menu:
+1. **Full Suite**: Deploys Fastfetch + KDE Konsole + Alacritty
+2. **Fastfetch Only**: Updates `~/.config/fastfetch/`
+3. **KDE Konsole Only**: Installs profile & colorscheme to `~/.local/share/konsole/`
+4. **Alacritty Only**: Installs `~/.config/alacritty/alacritty.toml`
 
 ---
 
-## 🔤 Requirements
+## 🖥️ Terminal Specifics
 
-- **Fastfetch**: `sudo pacman -S fastfetch`
-- **Nerd Font**: MesloLGS Nerd Font / JetBrains Mono Nerd Font
-- **Terminal Emulator**: 24-bit TrueColor support (KDE Konsole, Alacritty, Kitty, WezTerm)
+### KDE Konsole
+- **Profile**: `Chronin.profile` (`MesloLGS Nerd Font`, size 10, blinking beam cursor, hidden scrollbar).
+- **Color Scheme**: `VerdArch.colorscheme` (0.85 opacity).
+
+### Alacritty
+- **File**: `~/.config/alacritty/alacritty.toml`
+- **Settings**: 1:1 color parity with Konsole `VerdArch`, `opacity = 0.85`, `blur = true`, `MesloLGS Nerd Font`, and custom padding.
 
 ---
 
