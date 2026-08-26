@@ -107,7 +107,7 @@
     {
       "type": "cursor",
       "keyIcon": "󰆿",
-      "format": "{name} ({size}px)"
+      "format": "{1} ({2})"
     },
     {
       "type": "terminal",
